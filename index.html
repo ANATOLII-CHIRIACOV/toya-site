@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TO_YA personal digital business card">
+    <title>TO_YA - Digital Business Card</title>
+    <style>
+        /* Стили остаются без изменений */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #001510);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .photo-container {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 5px solid #ff8a00;
+            overflow: hidden;
+            margin: 20px auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .photo-container img:hover {
+            transform: scale(1.05);
+        }
+        .bio {
+            text-align: center;
+            max-width: 600px;
+            margin-bottom: 25px;
+        }
+        .contacts {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .qr-container {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .email-btn {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(90deg, #0072ff, #00c6ff);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .email-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            h1 { font-size: 2.5rem; }
+            .contacts { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TO_YA</h1>
+            <div class="photo-container">
+                <img src="photo4.jpg" alt="TO_YA Photo">
+            </div>
+        </header>
+        
+        <div class="bio">
+            <p>Hi! I'm TO_YA - a creative developer and digital artist. I specialize in creating immersive web projects at the intersection of technology and art. I handle full-cycle development: from concept to implementation.</p>
+            <p>Inspired by cyberpunk, neural networks and experimental electronics. Constantly exploring new forms of digital self-expression.</p>
+        </div>
+        
+        <div class="contacts">
+            <div class="qr-container">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=mailto:toleavebx@gmail.com" 
+                     alt="Email QR Code" width="150">
+            </div>
+        </div>
+        
+        <a href="mailto:toleavebx@gmail.com" class="email-btn">
+            Contact Me
+        </a>
+        
+        <footer>
+            <p>© 2025 TO_YA Digital. All rights in the metaverse reserved</p>
+        </footer>
+    </div>
+</body>
+</html>
